@@ -1,0 +1,211 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+nav{
+    height: 81px;
+    width: 100%;
+    background-color: red;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    width: 178px;
+    height: 140px;
+    background-color: green;
+    margin-left: 18px;
+    margin-right: 18px;
+    transition: 0.4s;
+    padding: 0;
+    clip-path: polygon(50% 100%, 100% 58%, 80% 0, 22% 0, 0 58%);
+}
+
+.logo:hover{
+    clip-path: polygon(51% 94%, 94% 58%, 76% 0, 26% 0, 7% 58%);
+}
+
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav li{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+nav li:hover{
+    background-color: blueviolet;
+    /*transition: border .5s;
+    border-bottom: 5px solid black;*/
+}
+
+nav a{
+    position: relative;
+    display: inline-block;
+    padding: 19px;
+    font-size: 18px;
+    font-family: Helvetica;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li:hover .sub-menu {
+    display: flex;
+  }
+  
+  .sub-menu {
+    display: none;
+    position: relative;
+  }
+  
+  .sub-menu ul {
+    position: absolute;
+    top: 40px;
+    left: -115px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sub-menu ul li {
+    width: 100%; /* added */
+    height: 40px;
+    padding: 5px; /* adjust */
+    white-space: nowrap; /* added */
+    background: red;
+    z-index: 10;
+  }
+
+.Login-Cadastro{
+    width: 260px;
+    height: 81px;
+    /*background-color: rebeccapurple;*/
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 35px;
+}
+.efeito-borda{
+      /*background-color: royalblue;*/
+      margin-top: 7px;
+      margin-bottom: 7px;
+      padding: 10px;
+  }
+
+.efeito-borda button, .btnCadastro{
+	-webkit-appearance: none;
+	border: none;
+	background: green;
+	color:white;
+	width: 110px;
+	height: 50px;
+	font-size: 19px;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	z-index: 10;
+    display: inline-block;
+    
+}
+
+.btnCadastro {
+    width: 120px;
+}
+
+.efeito-borda button span{
+	display: block;
+	position: relative;
+	line-height: 50px;
+	height: 52px;
+	cursor: pointer;
+}
+
+.efeito-borda button > span:after{
+	content:'';
+	position: absolute;
+	top:0;
+	left: 50%;
+	width: 22px;
+	height: 0;
+	border: 2px solid white;
+	border-left: none;
+	border-bottom: none;
+	transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+
+
+.efeito-borda:hover button > span:after{
+	width: calc(50% - 1px);
+	height: calc(100% - 2px);
+	transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+
+.efeito-borda button > span:before{
+	content:'';
+	position: absolute;
+	top:0;
+	right: 50%;
+	width: 20px;
+	height: 0;
+	border: 2px solid white;
+	border-right: none;
+	border-bottom: none;
+	transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+
+.efeito-borda:hover button > span:before{
+	width: calc(50% - 1px);
+	height: calc(100% - 2px);
+	transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+
+.efeito-borda button > span > span:before{
+	content:'';
+	position: absolute;
+	bottom:0;
+	right: 0%;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+
+.efeito-borda:hover button > span > span:before{
+	opacity: 1;
+	border-bottom: 2px solid white;
+	width: calc(50%);
+	height: 1px;
+	transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+}
+
+.efeito-borda button > span > span:after{
+	content:'';
+	position: absolute;
+	bottom:0;
+	left: 0%;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	
+}
+
+.efeito-borda:hover button > span > span:after{
+	opacity: 1;
+	border-bottom: 2px solid white;
+	width: calc(50%);
+	height: 1px;
+	transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+}
+
+.efeito-borda button > span > span > span{
+	color: white;
+}
